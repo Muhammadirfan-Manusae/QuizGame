@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ผลลัพธ์</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #007bff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-light p-5">
+    <div class="container">
+        <h1 class="mb-4">🎉 คุณ {{ name }} ได้คะแนน {{ score }} คะแนน</h1>
+        <p>⏱️ ใช้เวลา {{ duration }} วินาที</p>
+        <h3 class="mt-4">📚 เฉลย</h3>
+        <ul class="list-group">
+            {% for ans in answers %}
+                <li class="list-group-item">
+                    <strong>{{ ans.text }}</strong><br>
+                    คำตอบของคุณ: {{ ans.choices[ans.selected] }}<br>
+                    คำตอบที่ถูกต้อง: {{ ans.choices[ans.correct_index] }}
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-4">
+            <i class="fas fa-redo"></i> เล่นอีกครั้ง
+        </a>
+    </div>
+</body>
+</html>

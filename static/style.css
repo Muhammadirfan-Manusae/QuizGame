@@ -1,0 +1,96 @@
+/* เพิ่มฟอนต์จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* กล่องของคอนเทนเนอร์ */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* เอฟเฟคเมื่อผู้ใช้โฮเวอร์ที่กล่อง */
+.container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* การจัดเรียงหัวข้อ */
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* การตกแต่งปุ่ม */
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+/* การจัดระเบียบของฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* การตกแต่งลิสต์ */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #dfe6e9;
+    transform: translateY(-5px);
+}
+
+/* การปรับแต่งลิงค์ */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
